@@ -12,7 +12,7 @@ export class AppService {
     this.httpClient = httpClient;
   }
 
-  public getAllUsers(): Observable<User[]> {
-    return this.httpClient.get<User[]>(this.url);
+  public getASingleUser(): Observable<User> {
+    return this.httpClient.get<User>(this.url);
   }
 }
