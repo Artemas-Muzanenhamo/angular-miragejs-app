@@ -9,7 +9,7 @@ import {User} from './user';
 })
 export class AppComponent implements OnInit {
   title = 'angular-miragejs-app';
-  user: User;
+  user: User = new User();
 
   ngOnInit(): void {
     this.retrieveASingleUser();
