@@ -23,7 +23,6 @@ export class AppComponent implements OnInit {
       .subscribe(
         response => {
           this.user = response;
-          console.log(this.user.avatar_url);
         },
         error => console.error('Could not retrieve user from github 😩: ', error)
       );
