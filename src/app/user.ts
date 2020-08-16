@@ -1,22 +1,22 @@
-export class User {
+export interface User {
   login: string;
   id: number;
-  nodeId: string;
-  avatarUrl: string;
-  gravatarId: string;
+  node_id: string;
+  avatar_url: string;
+  gravatar_id: string;
   url: string;
-  htmlUrl: string;
-  followersUrl: string;
-  followingUrl: string;
-  gistsUrl: string;
-  starredUrl: string;
-  subscriptionsUrl: string;
-  organizationsUrl: string;
-  reposUrl: string;
-  eventsUrl: string;
-  receivedEventsUrl: string;
+  html_url: string;
+  followers_url: string;
+  following_url: string;
+  gists_url: string;
+  starred_url: string;
+  subscriptions_url: string;
+  organizations_url: string;
+  repos_url: string;
+  events_url: string;
+  received_events_url: string;
   type: string;
-  siteAdmin: boolean;
+  site_admin: boolean;
   name: string;
   company: string;
   blog: string;
@@ -24,11 +24,11 @@ export class User {
   email: string;
   hireable: string;
   bio: string;
-  twitterUsername: string;
-  publicRepos: number;
-  publicGists: number;
+  twitter_username: string;
+  public_repos: number;
+  public_gists: number;
   followers: number;
   following: number;
-  createdAt: string;
-  updatedAt: string;
+  created_at: string;
+  updated_at: string;
 }
