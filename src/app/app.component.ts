@@ -21,7 +21,8 @@ export class AppComponent implements OnInit {
   private retrieveASingleUser(): void {
     this.appService.getASingleUser()
       .subscribe(
-        response => this.user = response
+        response => this.user = response,
+        error => console.error('Could not retrieve user from github 😩', error)
       );
   }
 }
