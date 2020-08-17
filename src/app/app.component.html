@@ -44,6 +44,11 @@
   <img [src]="user?.avatar_url" alt="avatar image">
   <h3>{{user?.name}}</h3>
 
+  <h1>LIST OF OTHER USERS</h1>
+
+
+  <div *ngFor="let userInfo of users">{{userInfo?.name}}</div>
+
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;

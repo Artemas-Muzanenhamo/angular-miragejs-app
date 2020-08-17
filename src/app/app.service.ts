@@ -6,13 +6,17 @@ import {User} from './user';
 @Injectable()
 export class AppService {
   private httpClient: HttpClient;
-  private url = 'https://api.github.com/users/artemas-muzanenhamo';
+  private url = '/api/users';
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
   }
 
   public getASingleUser(): Observable<User> {
-    return this.httpClient.get<User>(this.url);
+    return this.httpClient.get<User>(this.url + '/artemas-muzanenhamo');
+  }
+
+  public getAllUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(this.url);
   }
 }

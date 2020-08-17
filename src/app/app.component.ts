@@ -10,21 +10,32 @@ import {User} from './user';
 export class AppComponent implements OnInit {
   title = 'angular-miragejs-app';
   user: User;
+  users: User[];
 
   ngOnInit(): void {
     this.retrieveASingleUser();
+    this.getMovies();
   }
 
-  constructor(private appService: AppService) {
-  }
+  constructor(
+    private appService: AppService
+  ) {}
 
   private retrieveASingleUser(): void {
     this.appService.getASingleUser()
       .subscribe(
-        response => {
-          this.user = response;
-        },
+        response => this.user = response,
         error => console.error('Could not retrieve user from github 😩: ', error)
+      );
+  }
+
+  private getMovies(): void {
+    this.appService.getAllUsers()
+      .subscribe(
+        response => {
+          this.users = response;
+          console.log(this.users);
+        }
       );
   }
 }
