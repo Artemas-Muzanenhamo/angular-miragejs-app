@@ -32,7 +32,7 @@ p {
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: #d20000;
   color: white;
   font-weight: 600;
 }
@@ -118,7 +118,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card.highlight-card {
-  background-color: #1976d2;
+  background-color: #d21919;
   color: white;
   font-weight: 600;
   border: none;
