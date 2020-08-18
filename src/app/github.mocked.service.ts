@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
 @Injectable()
 export default class GithubMockedService {
 
-  static mirageServer(): Server {
+  static mockServer(): Server {
     return new Server({
       routes(): void {
         this.namespace = 'api';
@@ -157,7 +157,7 @@ export default class GithubMockedService {
     });
   }
 
-  public mockServer(): Server {
-    return GithubMockedService.mirageServer();
+  public mirageJsServer(): Server {
+    return GithubMockedService.mockServer();
   }
 }

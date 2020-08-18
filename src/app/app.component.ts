@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   users: User[];
 
   ngOnInit(): void {
-    this.exampleClass.mockServer();
+    this.exampleClass.mirageJsServer();
     this.retrieveASingleUser();
     this.getMovies();
   }
