@@ -17,9 +17,7 @@ export class AppComponent implements OnInit {
     this.getMovies();
   }
 
-  constructor(
-    private appService: AppService
-  ) {}
+  constructor(private appService: AppService) {}
 
   private retrieveASingleUser(): void {
     this.appService.getASingleUser()
@@ -32,10 +30,7 @@ export class AppComponent implements OnInit {
   private getMovies(): void {
     this.appService.getAllUsers()
       .subscribe(
-        response => {
-          this.users = response;
-          console.log(this.users);
-        }
+        response => this.users = response
       );
   }
 }
