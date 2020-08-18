@@ -4,9 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {AppService} from './app.service';
 import {HttpClientModule} from '@angular/common/http';
-import mockServer from './github.mocked.service';
-
-mockServer();
+import GithubMockedService from './github.mocked.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +15,8 @@ mockServer();
     HttpClientModule
   ],
   providers: [
-    AppService
+    AppService,
+    GithubMockedService
   ],
   bootstrap: [AppComponent]
 })
