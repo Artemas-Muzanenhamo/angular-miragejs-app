@@ -1,7 +1,18 @@
 # Angular MirageJs App
 
 * This app will demonstrate how to use Angular with MirageJs retuning mocked
-responses.
+responses. There are some instances when you need to implement your UI/front-end
+and your back-end or the API you wish to consume is not yet ready. MirageJS gives you
+a way to have mocked responses on an API you may wish to call with your front-end
+meaning that you can implement your front-end without having to wait for your back-end
+to be done.
+
+## The Idea
+For this application I pretended to be one of the front-end devs at [Github](https://github.com/).
+I have been tasked with implementing the UI to show public Github users 
+information. The problem is that the back-end devs have been having too much 
+coffee ☕️ and haven't implemented the API on the back-end. Luckily, I found....
+MirageJS !!!!! 💪🏾😁
 
 ## Start the application
 
