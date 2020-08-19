@@ -14,14 +14,14 @@ export class AppComponent implements OnInit {
   users: User[];
 
   ngOnInit(): void {
-    this.exampleClass.mirageJsServer();
+    this.githubMockedService.mirageJsServer();
     this.retrieveASingleUser();
     this.getMovies();
   }
 
   constructor(
     private appService: AppService,
-    private exampleClass: GithubMockedService
+    private githubMockedService: GithubMockedService
   ) {}
 
   private retrieveASingleUser(): void {

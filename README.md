@@ -109,7 +109,7 @@ everything starts to come together.
 ```typescript
   constructor(
     private appService: AppService,
-    private exampleClass: GithubMockedService
+    private githubMockedService: GithubMockedService
   ) {}
 ```
 
@@ -126,7 +126,7 @@ export class AppComponent implements OnInit {
 * Add MirageJs server in the `ngOnInit()`
 ```typescript
   ngOnInit(): void {
-    this.exampleClass.mirageJsServer();
+    this.githubMockedService.mirageJsServer();
   }
 ```
 Now whenever our component is ready, `MirageJs Server` will also be ready to recieve request and respond
@@ -157,7 +157,7 @@ I had to call these methods as part of the `ngOnInit()` which all ends up lookin
 
 ```typescript
   ngOnInit(): void {
-    this.exampleClass.mirageJsServer();
+    this.githubMockedService.mirageJsServer();
     this.retrieveASingleUser();
     this.getMovies();
   }
