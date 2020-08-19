@@ -44,10 +44,11 @@
   <img [src]="user?.avatar_url" alt="avatar image">
   <h3>{{user?.name}}</h3>
 
-  <h1>LIST OF OTHER USERS</h1>
+  <h2>LIST OF OTHER GITHUB USERS RETRIEVED</h2>
 
-
-  <div *ngFor="let userInfo of users">{{userInfo?.name}}</div>
+  <ul>
+    <li *ngFor="let userInfo of users">{{userInfo?.name}}</li>
+  </ul>
 
   <!-- Footer -->
   <footer>
