@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.githubMockedService.mirageJsServer();
     this.retrieveASingleUser();
-    this.getMovies();
+    this.getAllUsers();
   }
 
   constructor(
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       );
   }
 
-  private getMovies(): void {
+  private getAllUsers(): void {
     this.appService.getAllUsers()
       .subscribe(
         response => this.users = response,
