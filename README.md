@@ -143,7 +143,7 @@ with our mocked responses.
       );
   }
 
-  private getMovies(): void {
+  private getAllUsers(): void {
     this.appService.getAllUsers()
       .subscribe(
         response => this.users = response,
@@ -159,7 +159,7 @@ I had to call these methods as part of the `ngOnInit()` which all ends up lookin
   ngOnInit(): void {
     this.githubMockedService.mirageJsServer();
     this.retrieveASingleUser();
-    this.getMovies();
+    this.getAllUsers();
   }
 ```
 
