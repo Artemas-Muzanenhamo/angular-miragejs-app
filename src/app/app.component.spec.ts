@@ -1,5 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {AppService} from './app.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import GithubMockedService from './github.mocked.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -7,6 +10,13 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        AppService,
+        GithubMockedService
+      ],
+      imports: [
+        HttpClientTestingModule
+      ]
     }).compileComponents();
   }));
 
