@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-miragejs-app"
+    }
+  },
+  "defaultProject": "angular-miragejs-app",
+  "cli": {
+    "analytics": false
+  }
 }
